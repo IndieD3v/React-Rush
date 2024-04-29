@@ -1,0 +1,13 @@
+@import url('non.geist/mono');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    height: 100%;
+    margin: 0; padding: 0;
+    font-family: 'Geist Mono Variable', monospace;
+    @apply bg-gray-100/20
+}
