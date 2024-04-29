@@ -770,7 +770,7 @@ function App() {
         }
 
 
-        {/* <div className='space-x-12 absolute bottom-0'>
+        <div className='space-x-12 absolute bottom-0 hidden'>
           <button onClick={() => {
             if (phaseInformation.currentPhase == 1) set_userobject_information({ ...userobject_information, positionX: goalobject_information.positionX, positionY: goalobject_information.positionY })
             if (phaseInformation.currentPhase == 2) set_userobject_information({ ...userobject_information, positionX: goalobject_information.positionX, positionY: goalobject_information.positionY, rotate: goalobject_information.rotate - 5 })
@@ -783,7 +783,7 @@ function App() {
             setPhaseInformation({ ...phaseInformation, currentPhase: 1 })
             set_userobject_information({ ...userobject_information, positionX: 0, positionY: 0, scale: 1, rotate: 0 })
           }}>reset</button>
-        </div> */}
+        </div>
       </div >
     </>
   )
