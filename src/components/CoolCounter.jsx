@@ -53,7 +53,7 @@ const CoolCounter = () => {
 
     return (
         <>
-            <div className="absolute right-5 top-5 flex w-fit items-center justify-between bg-white rounded-full border border-gray-200 shadow-md max-md:order-2">
+            <div className="flex w-fit items-center justify-between bg-white rounded-full border border-gray-200 shadow-md max-md:order-2">
                 <p className="text-sm ml-6 mr-5 font-medium max-md:mr-4">{formattedCount}</p>
 
                 <Button onClick={updateCountValue} variant="outline" className="scale-[1.2] bg-white rotate-6 p-[0.3rem] hover:bg-slate-100 rounded-full shadow-xl hover:scale-[1.25] max-md:scale-110 transition-all ease-in-out duration-200 active:scale-105">

@@ -699,11 +699,23 @@ function App() {
     <>
       <div className='flex flex-col justify-center items-center h-screen relative'>
 
-        <div className='absolute top-10 right-10 max-md:right-5 max-md:top-5'>
-          {/* <p className="text-xl text-gray-800 font-semibold tracking-tigher">REACT RUSH</p> */}
+        <div className='flex justify-between items-start absolute top-10 w-[95%] max-md:w-[90%] max-md:top-5'>
+          <div className=''>
+            <p className='text-lg tracking-wide'>
+              {phaseTAG[(phaseInformation.currentPhase) - 1].tag ? phaseTAG[(phaseInformation.currentPhase) - 1].tag : 'null'}
+            </p>
+            <p className='text-sm tracking-wider opacity-50'>{phaseInformation.currentPhase}/5</p>
+          </div>
+
+          <div className=''>
+            <a className="text-xl max-md:text-lg text-gray-800 font-semibold tracking-tigher" href='https://twitter.com/mtanmaym'>REACT RUSH</a>
+          </div>
+
+          <div className=''>
+            <CoolCounter />
+          </div>
         </div>
 
-        <CoolCounter />
 
         <div className='absolute bottom-10 right-10 max-md:w-[30%] max-md:right-3 max-md:bottom-5'>
           <p className="text-sm text-gray-800/50 font-medium tracking-tighter">Made with <span className="opacity-100 text-gray-800">💛</span> by <a className="underline text-gray-800/90" target="_blank" href="https://twitter.com/mtanmaym">Tanmay M</a></p>
@@ -721,13 +733,6 @@ function App() {
           ))}
         </ul >
 
-
-        <div className='absolute left-10 top-10 z-10 max-md:left-5 max-md:top-5'>
-          <p className='text-lg tracking-wide'>
-            {phaseTAG[(phaseInformation.currentPhase) - 1].tag ? phaseTAG[(phaseInformation.currentPhase) - 1].tag : 'null'}
-          </p>
-          <p className='text-sm tracking-wider opacity-50'>{phaseInformation.currentPhase}/5</p>
-        </div >
 
         <GoalObject goalObjectInfo={goalobject_information} />
 
@@ -770,7 +775,7 @@ function App() {
         }
 
 
-        <div className='space-x-12 absolute bottom-0 hidden'>
+        <div className='space-x-12 absolute bottom-0'>
           <button onClick={() => {
             if (phaseInformation.currentPhase == 1) set_userobject_information({ ...userobject_information, positionX: goalobject_information.positionX, positionY: goalobject_information.positionY })
             if (phaseInformation.currentPhase == 2) set_userobject_information({ ...userobject_information, positionX: goalobject_information.positionX, positionY: goalobject_information.positionY, rotate: goalobject_information.rotate - 5 })
@@ -783,6 +788,7 @@ function App() {
             setPhaseInformation({ ...phaseInformation, currentPhase: 1 })
             set_userobject_information({ ...userobject_information, positionX: 0, positionY: 0, scale: 1, rotate: 0 })
           }}>reset</button>
+          <p>{goalobject_information?.color}</p>
         </div>
       </div >
     </>
