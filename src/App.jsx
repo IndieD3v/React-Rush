@@ -708,7 +708,7 @@ function App() {
           </div>
 
           <div className=''>
-            <a className="text-xl max-md:text-lg text-gray-800 font-semibold tracking-tigher" href='https://twitter.com/mtanmaym'>REACT RUSH</a>
+            <a target="_blank" className="text-xl max-md:text-lg text-gray-800 font-semibold tracking-tigher" href='https://twitter.com/mtanmaym'>REACT RUSH</a>
           </div>
 
           <div className=''>
